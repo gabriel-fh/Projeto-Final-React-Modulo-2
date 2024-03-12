@@ -64,7 +64,6 @@
   justify-content: flex-start;
   text-align: center;
   gap: 2.6rem;
-
 }
 
 .title {
@@ -74,7 +73,7 @@
 .login {
   background-color: rgba(222, 222, 222, 0.06);
   padding: 5rem 4rem;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   width: 50.4rem;
   display: flex;
   flex-direction: column;
@@ -88,4 +87,23 @@
 .btnContainer {
   display: flex;
   justify-content: flex-start;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon button {
+  position: absolute;
+  right: 1rem;
+  top: 42%;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.inputWithIcon button svg {
+  fill: #fff;
 }

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@tanstack/react-query": "^5.26.3",
     "axios": "^1.6.7",
     "clsx": "^2.1.0",
     "jose": "^5.2.3",
