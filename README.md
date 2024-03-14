@@ -16,9 +16,9 @@ A aplicação "Ada Max" oferece as seguintes funcionalidades:
 1. **Home:**
 
    - Mostra os banners dos filmes. Pegando de GET `/api/banners`;
-   - [ ] (plus) Criar um carousel com os banners;
-   - [ ] Mostrar os trilhos de ofertas. Pegando em GET `/api/trail-offers`;
-   - [ ] No momento que o elmento da oferta entrar no viewport, chamamos o GET `/api/trail-offer/:id` então mostramos data um dos thumbs das ofertas
+   - Carrosel com os banners;
+   - Mostra os trilhos de ofertas. Pegando em GET `/api/trail-offers`;
+   - No momento que o elmento da oferta entrar no viewport, chamamos o GET `/api/trail-offer/:id` então mostramos cada um dos thumbs das ofertas
 
 2. **Login:**
 
