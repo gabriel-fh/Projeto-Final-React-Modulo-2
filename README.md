@@ -1,6 +1,6 @@
 # Ada Max
 
-Este é um projeto de conclusão do módulo **[React II🔗](https://github.com/josephmatheus/vem-ser-tech-ifood/tree/main/modulo05-react-I)** do curso Vem Ser Tech, um programa Ada Tech em parceria com o iFood.
+Este é um projeto de conclusão do módulo **React II🔗** do curso Vem Ser Tech, um programa Ada Tech em parceria com o iFood.
 O projeto consiste em um clone da plataforma ***max.com*** (antiga hbomax.com )web onde os usuários podem visualizar uma lista de receitas culinárias. Ele foi desenvolvido como parte do curso de React I.
 
 ## Screenshots 🖼
