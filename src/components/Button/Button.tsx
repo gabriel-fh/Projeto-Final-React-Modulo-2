@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 import { IconLoading } from "../../assets/Icons";
 
 type ButtonProps = {
-  variant?: "transparent" | "filled";
+  variant?: "transparent" | "filled" | "transparentFill";
   fullWidth?: boolean;
   isLoading?: boolean;
 } & React.ComponentPropsWithoutRef<"button">;
@@ -13,6 +13,7 @@ const Button = ({
   children,
   variant,
   isLoading,
+  fullWidth,
   ...props
 }: ButtonProps) => {
   return (
@@ -20,6 +21,9 @@ const Button = ({
       className={clsx(styles.btn, {
         [styles.transparent]: variant === "transparent",
         [styles.filled]: variant === "filled",
+        [styles.transparentFill]: variant === "transparentFill",
+        [styles.fullWidth]: fullWidth,
+
       })}
       disabled={props.disabled || isLoading}
       {...props}

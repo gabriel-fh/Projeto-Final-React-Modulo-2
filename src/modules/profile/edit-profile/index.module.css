@@ -1,0 +1,20 @@
+.limiter {
+  margin: 0 auto;
+  max-width: 408px;
+  width: 100%;
+  padding: 40px;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}

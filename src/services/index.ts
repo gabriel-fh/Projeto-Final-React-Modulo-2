@@ -1,4 +1,10 @@
-import { AvatarItem, ProfileBodyType, ProfileType } from "../types";
+import {
+  AvatarItem,
+  Banner,
+  ProfileBodyType,
+  ProfileType,
+  TrailOffer,
+} from "../types";
 
 import { api } from "../clients/api";
 
@@ -31,4 +37,16 @@ export const putProfile = (id: number, body: ProfileBodyType) => {
 
 export const deleteProfile = (id: number) => {
   return api.delete(`/api/profile/${id}`);
+};
+
+export const getBanners = () => {
+  return api.get<Banner[]>("/api/banners");
+};
+
+export const getTrailOffers = () => {
+  return api.get<Omit<TrailOffer, "offers">[]>("/api/trail-offers");
+};
+
+export const getOffer = (id: number) => {
+  return api.get<TrailOffer>(`/api/trail-offers/${id}`);
 };

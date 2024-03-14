@@ -6,7 +6,7 @@ type AlertProps = {
   children: React.ReactNode;
 };
 
-export const Alert = ({ children }: AlertProps) => {
+const Alert = ({ children }: AlertProps) => {
   return (
     <div className={styles.container}>
       <IconWarning />
@@ -14,3 +14,5 @@ export const Alert = ({ children }: AlertProps) => {
     </div>
   );
 };
+
+export default Alert;

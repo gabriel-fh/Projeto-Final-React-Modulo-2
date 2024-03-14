@@ -28,3 +28,26 @@ export type ProfileBodyType = {
   avatarId: number;
   name: string;
 };
+
+export type Banner = {
+  id: number;
+  title: string;
+  description: string;
+  headline: string;
+  video: string;
+  image: string;
+  link: string;
+};
+
+export type TrailOffer = {
+  offerId: number;
+  title: string;
+  offers?: Offer[];
+};
+
+export type Offer = {
+  id: number;
+  title: string;
+  image: string;
+  link: string;
+};
