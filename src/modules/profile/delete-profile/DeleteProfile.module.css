@@ -1,0 +1,27 @@
+.header {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.p {
+  margin: 24px auto 48px;
+  max-width: 468px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  max-width: 335px;
+  margin: 0px auto;
+  width: 100%;
+}

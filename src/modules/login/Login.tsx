@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import styles from "./Login.module.css";
+import style from "../../styles/index.module.css";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { IconEyeClosed, IconEyeOpened } from "../../assets/Icons";
-import { useLogin } from "./hooks/use-login";
-import { Alert } from "../../components/Alert";
+
+import Alert from "../../components/Alert";
+import  useLogin  from "./hooks/use-login";
 
 const Login = () => {
   const {
@@ -18,7 +20,7 @@ const Login = () => {
   } = useLogin();
 
   return (
-    <main className={styles.container}>
+    <main className={style.container}>
       <header className={styles.header}>
         <Link to="/login" className={styles.logo}>
           <img src="/max.webp" alt="Ada Max" />
@@ -26,7 +28,7 @@ const Login = () => {
         <Button variant="transparent">Sign Up Now</Button>
       </header>
       <section className={styles.content}>
-        <h1 className={styles.title}>Get Started</h1>
+        <h1 className={style.title}>Get Started</h1>
         <div className={styles.login}>
           <h2 className={styles.title}>Sign In</h2>
           <p className={styles.description}>
