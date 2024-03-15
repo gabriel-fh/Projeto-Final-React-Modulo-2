@@ -24,6 +24,5 @@ export const getTrending = async (
   };
   
   const response = await axios.get(url, { params });
-  console.log(response.data.results);
   return response.data.results as tmdbData[];
 };

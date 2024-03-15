@@ -35,8 +35,6 @@ export const Series = () => {
     }
   }, [inView]);
 
-  
-
   const render = () => {
     if (data?.length) {
       return data.map((item) => (

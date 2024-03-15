@@ -7,13 +7,13 @@ import { useLocation } from "react-router-dom";
 
 const Skeleton = () => {
   return [1, 2, 3, 4, 5].map((i) => (
-    <PagesStyles.OfferListItemSkeleton key={i} style={{width: '253px', height: '380px'}}/> // Corrigido a altura
+    <PagesStyles.OfferListItemSkeleton key={i} style={{width: '253px', height: '380px'}}/> 
   ));
 };
 
 export const KidsFamily = () => {
   const [startLoading, setStartLoading] = useState(false);
-  const [key, setKey] = useState(0); // Adicionado para forçar a re-renderização
+  const [key, setKey] = useState(0);
 
   const { ref, inView } = useInView({
     threshold: 0.4,
@@ -22,10 +22,9 @@ export const KidsFamily = () => {
   const location = useLocation(); 
 
   useEffect(() => {
-    // Resetando o startLoading para reiniciar a requisição
     setStartLoading(false);
-    setKey(prevKey => prevKey + 1); // Aumenta a chave para forçar re-fetch
-    setTimeout(() => setStartLoading(true), 0); // Um pequeno delay para garantir a reativação
+    setKey(prevKey => prevKey + 1);
+    setTimeout(() => setStartLoading(true), 0);
   }, [location.pathname]);
 
   const { data } = useGetTmdbData(key, 'movie', startLoading, 'discover');
