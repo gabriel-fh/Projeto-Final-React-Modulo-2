@@ -7,6 +7,9 @@ import { DeleteProfile } from "../modules/profile/delete-profile/DeleteProfile";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import { Backstage } from "../modules/backstage";
 import { Home } from "../modules/home";
+import { Series } from "../modules/series/Series";
+import { Movies } from "../modules/movies/Movies";
+import { KidsFamily } from "../modules/kids&Family/KidsFamily";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +19,30 @@ const AppRoutes = () => {
         element={
           <ProtectedRoute role="user">
             <Home />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/series"
+        element={
+          <ProtectedRoute role="user">
+            <Series />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/movies"
+        element={
+          <ProtectedRoute role="user">
+            <Movies />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/kids&family"
+        element={
+          <ProtectedRoute role="user">
+            <KidsFamily />
           </ProtectedRoute>
         }
       />

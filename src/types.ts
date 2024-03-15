@@ -51,3 +51,8 @@ export type Offer = {
   image: string;
   link: string;
 };
+
+export type tmdbData = {
+  id: number;
+  poster_path: string;
+};

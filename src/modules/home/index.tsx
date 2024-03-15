@@ -1,13 +1,13 @@
 import * as S from "./styles";
+import * as PagesStyles from "../styles/styles";
 
 import { HomeBanner } from "./HomeBanner";
-import { HomeMenu } from "./HomeMenu";
 import { HomeTrailOffer } from "./HomeTrailOffer";
-import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { useGetBanners } from "./hooks/get-banners";
 import { useGetTrailOffers } from "./hooks/get-trail-offers";
 import { useState } from "react";
+import Header  from "../../components/Header/Header";
 
 export const Home = () => {
   const { data: banners } = useGetBanners();
@@ -17,24 +17,9 @@ export const Home = () => {
 
   return (
     <>
-      <S.Container>
-        <S.Unscrollable />
-        <S.Header>
-          <Link to="/login">
-            <S.Logo src="/max.webp" alt="Ada Max" />
-          </Link>
-          <S.Menu>
-            <S.MenuItem $active>Home</S.MenuItem>
-            <S.MenuItem>Series</S.MenuItem>
-            <S.MenuItem>Movies</S.MenuItem>
-            <S.MenuItem>
-              <img src="/hbo.webp" width={32} />
-            </S.MenuItem>
-            <S.MenuItem>Kids & Family</S.MenuItem>
-          </S.Menu>
-          <HomeMenu />
-        </S.Header>
-
+      <PagesStyles.Container>
+        <PagesStyles.Unscrollable />
+        <Header />
         <S.Banner>
           {banner ? <HomeBanner banner={banner} /> : null}
           <S.BannerDots>
@@ -59,7 +44,7 @@ export const Home = () => {
             );
           })}
         </S.Offers>
-      </S.Container>
+      </PagesStyles.Container>
     </>
   );
 };
