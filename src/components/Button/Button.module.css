@@ -22,3 +22,20 @@
 .filled:hover {
   background-color: rgba(255, 255, 255);
 }
+
+.transparentFill {
+  background-color: rgba(134, 151, 206, 0.3);
+}
+.transparentFill:hover {
+  background-color: rgba(134, 151, 206, 0.5);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.btn:disabled {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: not-allowed !important;
+}

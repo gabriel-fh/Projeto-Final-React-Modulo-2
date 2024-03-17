@@ -1,0 +1,110 @@
+{
+  "login": {
+    "button": {
+      "signIn": "Sign In",
+      "signUp": "Sign Up Now",
+      "lang": {
+        "pt-BR": "Portuguese",
+        "en-US": "English"
+      }
+    },
+    "title": {
+      "getStarted": "Get Started",
+      "signIn": "Sign In"
+    },
+    "description": "Enter your Max or HBO Max account email address and password.",
+    "input": {
+      "email": "Email Address",
+      "password": "Password"
+    }
+  },
+  "profile": {
+    "title": "Who’s Watching?",
+    "button": {
+      "newProfile": "New Profile",
+      "edit": "Edit",
+      "done": "Done"
+    }
+  },
+  "createProfile": {
+    "title": "Create Profile",
+    "input": {
+      "name": "Profile Name"
+    },
+    "button": {
+      "save": "Save",
+      "cancel": "Cancel"
+    }
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "input": {
+      "name": "Profile Name"
+    },
+    "button": {
+      "save": "Done",
+      "delete": "Delete Profile"
+    }
+  },
+  "deleteProfile": {
+    "title": "Delete Profile ?",
+    "description": "This will permanently delete all settings and preferences for this profile, including My List and Continue Watching.",
+    "button": {
+      "cancel": "Cancel",
+      "delete": "Delete Profile"
+    },
+    "alert": {
+      "backToProfile": "Click here to return",
+      "button": {
+        "backToProfile": "Back to profile"
+      }
+    }
+  },
+  "chooseAnAvatar": {
+    "title": "Choose an Avatar",
+    "button": {
+      "back": "Back"
+    }
+  },
+  "home": {
+    "header": {
+      "nav": {
+        "home": "Home",
+        "series": "Series",
+        "movies": "Movies",
+        "kidsFamily": "Kids & Family"
+      }
+    },
+    "banner": {
+      "button": {
+        "goToMovie": "Go to Movie"
+      },
+      "description": {
+        "movieDescription5": "Aquaman (Jason Momoa) forges an unlikely alliance with his imprisoned brother, Orm, to stop Black Manta and the mythic Black Trident.",
+        "movieDescription1": "The son of a noble family travels to a dangerous planet to ensure the future of his people in this visually stunning sci-fi epic.",
+        "movieDescription4": "Leonard and Sheldon learn about the social aspects of life through their relationships with the beauty who lives next door."
+      }
+    },
+    "homeTrailOffer": {
+      "title": {
+        "offerTitle1" : "The Best of 2020",
+        "offerTitle2" : "Streaming only on Ada Max",
+        "offerTitle3" : "Watch it again",
+        "offerTitle4" : "Top 10 in US Today"
+      }
+    },
+    "dropDownMenu": {
+      "button": {
+        "signOut": "Sign Out",
+        "lang": {
+          "title": "Language",
+          "option": {
+            "pt-BR": "Portuguese",
+            "en-US": "English"
+          }
+        },
+        "back": "Back"
+      }
+    }
+  }
+}

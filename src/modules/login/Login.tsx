@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./Login.module.css";
+import globalStyles from "../../styles/index.module.css";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-import { IconEyeClosed, IconEyeOpened } from "../../assets/Icons";
-import { useLogin } from "./hooks/use-login";
-import { Alert } from "../../components/Alert";
+import { IconEyeClosed, IconEyeOpened, IconLang } from "../../assets/Icons";
+
+import Alert from "../../components/Alert";
+import useLogin from "./hooks/use-login";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useLang } from "../../providers/LangProvider";
 
 const Login = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const {
     showPassword,
     errors,
@@ -17,24 +24,59 @@ const Login = () => {
     handleSubmit,
   } = useLogin();
 
+  const { t } = useTranslation();
+  const { changeLanguage, lang } = useLang();
+
   return (
-    <main className={styles.container}>
+    <main className={globalStyles.container}>
       <header className={styles.header}>
         <Link to="/login" className={styles.logo}>
           <img src="/max.webp" alt="Ada Max" />
         </Link>
-        <Button variant="transparent">Sign Up Now</Button>
+        <div style={{ display: "flex", alignItems: "center", gap: "5rem" }}>
+          <div className={styles.langMenu}>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              style={{
+                backgroundColor: `${isOpen ? "rgba(134, 151, 206, 0.3)" : ""}`,
+              }}
+            >
+              <IconLang />
+            </button>
+            {isOpen && (
+              <div className={styles.langOptions}>
+                <span
+                  onClick={() => {
+                    changeLanguage("en-US");
+                    setIsOpen(false);
+                  }}
+                  className={lang === "en-US" ? styles.activeLang : ""}
+                >
+                  {t("login.button.lang.en-US")}
+                </span>
+                <span
+                  onClick={() => {
+                    changeLanguage("pt-BR");
+                    setIsOpen(false);
+                  }}
+                  className={lang === "pt-BR" ? styles.activeLang : ""}	
+                >
+                  {t("login.button.lang.pt-BR")}
+                </span>
+              </div>
+            )}
+          </div>
+          <Button variant="transparent">{t("login.button.signUp")}</Button>
+        </div>
       </header>
       <section className={styles.content}>
-        <h1 className={styles.title}>Get Started</h1>
+        <h1 className={globalStyles.title}>{t("login.title.getStarted")}</h1>
         <div className={styles.login}>
-          <h2 className={styles.title}>Sign In</h2>
-          <p className={styles.description}>
-            Enter your Max or HBO Max account email address and password.
-          </p>
+          <h2 className={styles.title}>{t("login.title.signIn")}</h2>
+          <p className={styles.description}>{t("login.description")}</p>
           <form onSubmit={handleSubmit}>
             <Input
-              label="Email Address"
+              label={t("login.input.email")}
               placeholder="email@email.com"
               type="email"
               disabled={isPending}
@@ -43,7 +85,7 @@ const Login = () => {
             />
             <div className={styles.inputWithIcon}>
               <Input
-                label="Password"
+                label={t("login.input.password")}
                 type={showPassword ? "text" : "password"}
                 disabled={isPending}
                 error={errors.password?.message}
@@ -59,7 +101,7 @@ const Login = () => {
             </div>
             <div className={styles.btnContainer}>
               <Button type="submit" variant="filled" isLoading={isPending}>
-                Sign In
+                {t("login.button.signIn")}
               </Button>
             </div>
             {isError && <Alert>Credencias inválidas</Alert>}

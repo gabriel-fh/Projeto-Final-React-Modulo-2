@@ -3,9 +3,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoginSchema, LoginType } from "../types";
 import { usePostLogin } from "./use-post-login";
+import { useAuth } from "../../../providers/AuthProvider";
 
-export const useLogin = () => {
+const useLogin = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const { login } = useAuth();
 
   const {
     register,
@@ -17,8 +19,7 @@ export const useLogin = () => {
 
   const { mutate, isPending, isError } = usePostLogin({
     onSuccess: ({ data }) => {
-      //   login(data.token);
-      console.log("SUCCESS", data);
+        login(data.token);
     },
     onError: (err) => {
       console.log("ERROR", err);
@@ -27,7 +28,6 @@ export const useLogin = () => {
 
   const onSubmit = (data: LoginType) => {
     mutate(data);
-    console.log("DATA", data);
   };
 
 
@@ -41,3 +41,5 @@ export const useLogin = () => {
     handleSubmit: handleSubmit(onSubmit),
   };
 };
+
+export default useLogin;

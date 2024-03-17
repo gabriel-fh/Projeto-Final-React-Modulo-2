@@ -1,0 +1,39 @@
+.container {
+  height: 100%;
+  object-fit: fill;
+  position: fixed;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    hsl(235deg 83% 16%) 0%,
+    hsl(235deg 79% 15%) 23%,
+    hsl(237deg 74% 14%) 33%,
+    hsl(239deg 68% 13%) 41%,
+    hsl(244deg 68% 12%) 49%,
+    hsl(248deg 70% 10%) 56%,
+    hsl(251deg 72% 9%) 63%,
+    hsl(254deg 75% 8%) 71%,
+    hsl(254deg 78% 6%) 80%,
+    hsl(251deg 84% 5%) 90%
+  );
+  z-index: 20;
+}
+
+.svg {
+  animation: spin 1s linear infinite;
+  height: 40px;
+  width: 40px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

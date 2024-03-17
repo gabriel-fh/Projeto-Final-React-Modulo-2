@@ -1,0 +1,110 @@
+{
+  "login": {
+    "button": {
+      "signIn": "Entrar",
+      "signUp": "Criar Conta",
+      "lang": {
+        "pt-BR": "Português",
+        "en-US": "Inglês"
+      }
+    },
+    "title": {
+      "getStarted": "Iniciar Sessão",
+      "signIn": "Fazer Login"
+    },
+    "description": "Digite o endereço de e-mail e a senha da sua conta Max ou HBO Max.",
+    "input": {
+      "email": "E-mail",
+      "password": "Senha"
+    }
+  },
+  "profile": {
+    "title": "Quem está assistindo?",
+    "button": {
+      "newProfile": "Novo Perfil",
+      "edit": "Editar",
+      "done": "Concluido"
+    }
+  },
+  "createProfile": {
+    "title": "Criar Perfil",
+    "input": {
+      "name": "Nome"
+    },
+    "button": {
+      "save": "Salvar",
+      "cancel": "Cancelar"
+    }
+  },
+  "editProfile": {
+    "title": "Editar Perfil",
+    "input": {
+      "name": "Nome"
+    },
+    "button": {
+      "save": "Salvar",
+      "delete": "Excluir Perfil"
+    }
+  },
+  "deleteProfile": {
+    "title": "Excluir Perfil ?",
+    "description": "Isso excluirá permanentemente todas as configurações e preferências deste perfil, incluindo Minha lista e Continuar assistindo.",
+    "button": {
+      "cancel": "Cancelar",
+      "delete": "Excluir"
+    },
+    "alert": {
+      "backToProfile": "Clique aqui para voltar",
+      "button": {
+        "backToProfile": "Voltar para o perfil"
+      }
+    }
+  },
+  "chooseAnAvatar": {
+    "title": "Escolha um avatar",
+    "button": {
+      "back": "Voltar"
+    }
+  },
+  "home": {
+    "header": {
+      "nav": {
+        "home": "Início",
+        "series": "Séries",
+        "movies": "Filmes",
+        "kidsFamily": "Crianças e Família"
+      }
+    },
+    "banner": {
+      "button": {
+        "goToMovie": "Ir para o filme"
+      },
+      "description": {
+        "movieDescription5": "Aquaman (Jason Momoa) forma uma aliança improvável com seu irmão preso, Orm, para deter o Black Manta e o mítico Tridente Negro.",
+        "movieDescription1": "O filho de uma família nobre viaja para um planeta perigoso para garantir o futuro de seu povo neste épico de ficção científica visualmente impressionante.",
+        "movieDescription4": "Leonard e Sheldon aprendem sobre os aspectos sociais da vida através de suas relações com a beleza que vive ao lado."
+      }
+    },
+    "homeTrailOffer": {
+      "title": {
+        "offerTitle1": "O Melhor de 2020",
+        "offerTitle2": "Apenas no Ada Max",
+        "offerTitle3": "Assistir de novo",
+        "offerTitle4": "Top 10 nos EUA Hoje"
+      }
+    },
+    "dropDownMenu": {
+      "button": {
+        "signOut": "Sair",
+        "lang": {
+          "title": "Idioma",
+          "option": {
+            "pt-BR": "Português",
+            "en-US": "Inglês"
+          }
+        },
+        "back": "Voltar"
+      }
+    }
+  }
+}
