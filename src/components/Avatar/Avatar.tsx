@@ -21,11 +21,11 @@ const Avatar = ({
 }: AvatarProps) => {
   const imagePath = image ? `/images/${image}.webp` : user;
 
-  if (name === "New Profile") {
+  if (name === "New Profile" || name === 'Novo Perfil') {
     return (
       <>
         <div className={styles.avatar__image}>+</div>
-        <div className={styles.avatar__name}>New Profile</div>
+        <div className={styles.avatar__name}>{name}</div>
       </>
     );
   }

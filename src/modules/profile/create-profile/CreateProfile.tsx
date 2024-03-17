@@ -7,6 +7,7 @@ import { Loader } from "../../../components/Loader/Loader";
 import globalStyles from "../../../styles/index.module.css";
 import AvatarPicker from "../components/avatar-picker/AvatarPicker";
 import { useCreateProfile } from "./hooks/use-create-profile";
+import { useTranslation } from "react-i18next";
 
 const CreateProfile = () => {
   const {
@@ -24,12 +25,14 @@ const CreateProfile = () => {
     isOpen,
   } = useCreateProfile();
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={globalStyles.container}>
         <div className={styles.limiter}>
           <div className={styles.container}>
-            <h1 className={globalStyles.title}>Create Profile</h1>
+            <h1 className={globalStyles.title}>{t('createProfile.title')}</h1>
             <div className="flex-center" onClick={open}>
               <Avatar image={avatar?.image} isEdit />
             </div>
@@ -42,7 +45,7 @@ const CreateProfile = () => {
                   {...register("avatarId")}
                 />
                 <Input
-                  label="Profile Name"
+                  label={`${t('createProfile.input.name')}`}
                   disabled={isPending}
                   error={errors.name?.message}
                   {...register("name")}
@@ -56,14 +59,14 @@ const CreateProfile = () => {
                   disabled={isDisabled}
                   variant={!isDisabled ? "filled" : undefined}
                 >
-                  Save
+                  {t('createProfile.button.save')}
                 </Button>
                 <Button
                   variant="transparentFill"
                   onClick={handleClose}
                   type="button"
                 >
-                  Cancel
+                  {t('createProfile.button.cancel')}
                 </Button>
               </div>
             </form>
