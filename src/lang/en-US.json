@@ -18,7 +18,55 @@
       "password": "Password"
     }
   },
-  "home" : {
+  "profile": {
+    "title": "Who’s Watching?",
+    "button": {
+      "newProfile": "New Profile",
+      "edit": "Edit",
+      "done": "Done"
+    }
+  },
+  "createProfile": {
+    "title": "Create Profile",
+    "input": {
+      "name": "Profile Name"
+    },
+    "button": {
+      "save": "Save",
+      "cancel": "Cancel"
+    }
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "input": {
+      "name": "Profile Name"
+    },
+    "button": {
+      "save": "Done",
+      "delete": "Delete Profile"
+    }
+  },
+  "deleteProfile": {
+    "title": "Delete Profile ?",
+    "description": "This will permanently delete all settings and preferences for this profile, including My List and Continue Watching.",
+    "button": {
+      "cancel": "Cancel",
+      "delete": "Delete Profile"
+    },
+    "alert": {
+      "backToProfile": "Click here to return",
+      "button": {
+        "backToProfile": "Back to profile"
+      }
+    }
+  },
+  "chooseAnAvatar" : {
+    "title": "Choose an Avatar",
+    "button": {
+      "back": "Back"
+    }
+  },
+  "home": {
     "header": {
       "nav": {
         "home": "Home",

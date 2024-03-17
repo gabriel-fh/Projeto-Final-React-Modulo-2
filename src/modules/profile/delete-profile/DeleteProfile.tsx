@@ -8,19 +8,22 @@ import styles from "./DeleteProfile.module.css";
 import globalStyles from "../../../styles/index.module.css";
 import Button from "../../../components/Button/Button";
 import { useDeleteProfile } from "./hooks/use-delete-profile";
+import { useTranslation } from "react-i18next";
 
 export const DeleteProfile = () => {
   const navigate = useNavigate();
 
   const { profile, err, loading, handleDelete } = useDeleteProfile();
 
+  const { t } = useTranslation();
+
   if (err) {
     return (
       <div className={globalStyles.container}>
         <Alert>
-          {err} clica aqui pra voltar{" "}
+          {err} {t("deleteProfile.alert.backToProfile")}
           <button onClick={() => navigate("/profile")}>
-            Voltar para o perfil
+            {t("deleteProfile.alert.button.backToProfile")}
           </button>
         </Alert>
       </div>
@@ -34,22 +37,19 @@ export const DeleteProfile = () => {
           <Avatar image={profile?.avatar.image} name={profile?.name} disabled />
         </div>
 
-        <h1 className={globalStyles.title}>Delete Profile ?</h1>
+        <h1 className={globalStyles.title}>{t("deleteProfile.title")}</h1>
 
-        <p className={styles.p}>
-          This will permanently delete all settings and preferences for this
-          profile, including My List and Continue Watching.
-        </p>
+        <p className={styles.p}>{t("deleteProfile.description")}</p>
 
         <div className={styles.actions}>
           <Button onClick={handleDelete} disabled={loading} variant="filled">
-            Delete Profile
+            {t("deleteProfile.button.delete")}
           </Button>
           <Button
             variant="transparentFill"
             onClick={() => navigate("/profile")}
           >
-            Cancel
+            {t("deleteProfile.button.cancel")}
           </Button>
         </div>
       </div>

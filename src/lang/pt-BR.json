@@ -18,7 +18,55 @@
       "password": "Senha"
     }
   },
-  "home" : {
+  "profile": {
+    "title": "Quem está assistindo?",
+    "button": {
+      "newProfile": "Novo Perfil",
+      "edit": "Editar",
+      "done": "Concluido"
+    }
+  },
+  "createProfile": {
+    "title": "Criar Perfil",
+    "input": {
+      "name": "Nome"
+    },
+    "button": {
+      "save": "Salvar",
+      "cancel": "Cancelar"
+    }
+  },
+  "editProfile": {
+    "title": "Editar Perfil",
+    "input": {
+      "name": "Nome"
+    },
+    "button": {
+      "save": "Salvar",
+      "delete": "Excluir Perfil"
+    }
+  },
+  "deleteProfile": {
+    "title": "Excluir Perfil ?",
+    "description": "Isso excluirá permanentemente todas as configurações e preferências deste perfil, incluindo Minha lista e Continuar assistindo.",
+    "button": {
+      "cancel": "Cancelar",
+      "delete": "Excluir"
+    },
+    "alert": {
+      "backToProfile": "Clique aqui para voltar",
+      "button": {
+        "backToProfile": "Voltar para o perfil"
+      }
+    }
+  },
+  "chooseAnAvatar" : {
+    "title": "Escolha um avatar",
+    "button": {
+      "back": "Voltar"
+    }
+  },
+  "home": {
     "header": {
       "nav": {
         "home": "Início",
