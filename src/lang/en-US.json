@@ -2,7 +2,7 @@
   "login": {
     "button": {
       "signIn": "Sign In",
-      "singUp": "Sign Up Now",
+      "signUp": "Sign Up Now",
       "lang": {
         "pt-BR": "Portuguese",
         "en-US": "English"
@@ -60,7 +60,7 @@
       }
     }
   },
-  "chooseAnAvatar" : {
+  "chooseAnAvatar": {
     "title": "Choose an Avatar",
     "button": {
       "back": "Back"
@@ -73,6 +73,37 @@
         "series": "Series",
         "movies": "Movies",
         "kidsFamily": "Kids & Family"
+      }
+    },
+    "banner": {
+      "button": {
+        "goToMovie": "Go to Movie"
+      },
+      "description": {
+        "movieDescription5": "Aquaman (Jason Momoa) forges an unlikely alliance with his imprisoned brother, Orm, to stop Black Manta and the mythic Black Trident.",
+        "movieDescription1": "The son of a noble family travels to a dangerous planet to ensure the future of his people in this visually stunning sci-fi epic.",
+        "movieDescription4": "Leonard and Sheldon learn about the social aspects of life through their relationships with the beauty who lives next door."
+      }
+    },
+    "homeTrailOffer": {
+      "title": {
+        "offerTitle1" : "The Best of 2020",
+        "offerTitle2" : "Streaming only on Ada Max",
+        "offerTitle3" : "Watch it again",
+        "offerTitle4" : "Top 10 in US Today"
+      }
+    },
+    "dropDownMenu": {
+      "button": {
+        "signOut": "Sign Out",
+        "lang": {
+          "title": "Language",
+          "option": {
+            "pt-BR": "Portuguese",
+            "en-US": "English"
+          }
+        },
+        "back": "Back"
       }
     }
   }

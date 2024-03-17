@@ -2,7 +2,7 @@
   "login": {
     "button": {
       "signIn": "Entrar",
-      "singUp": "Criar Conta",
+      "signUp": "Criar Conta",
       "lang": {
         "pt-BR": "Português",
         "en-US": "Inglês"
@@ -60,7 +60,7 @@
       }
     }
   },
-  "chooseAnAvatar" : {
+  "chooseAnAvatar": {
     "title": "Escolha um avatar",
     "button": {
       "back": "Voltar"
@@ -73,6 +73,37 @@
         "series": "Séries",
         "movies": "Filmes",
         "kidsFamily": "Crianças e Família"
+      }
+    },
+    "banner": {
+      "button": {
+        "goToMovie": "Ir para o filme"
+      },
+      "description": {
+        "movieDescription5": "Aquaman (Jason Momoa) forma uma aliança improvável com seu irmão preso, Orm, para deter o Black Manta e o mítico Tridente Negro.",
+        "movieDescription1": "O filho de uma família nobre viaja para um planeta perigoso para garantir o futuro de seu povo neste épico de ficção científica visualmente impressionante.",
+        "movieDescription4": "Leonard e Sheldon aprendem sobre os aspectos sociais da vida através de suas relações com a beleza que vive ao lado."
+      }
+    },
+    "homeTrailOffer": {
+      "title": {
+        "offerTitle1": "O Melhor de 2020",
+        "offerTitle2": "Apenas no Ada Max",
+        "offerTitle3": "Assistir de novo",
+        "offerTitle4": "Top 10 nos EUA Hoje"
+      }
+    },
+    "dropDownMenu": {
+      "button": {
+        "signOut": "Sair",
+        "lang": {
+          "title": "Idioma",
+          "option": {
+            "pt-BR": "Português",
+            "en-US": "Inglês"
+          }
+        },
+        "back": "Voltar"
       }
     }
   }

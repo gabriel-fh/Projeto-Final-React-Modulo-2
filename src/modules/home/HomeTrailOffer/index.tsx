@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { TrailOffer } from "../../../types";
 import { useGetOffer } from "../hooks/get-offer";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   trailOffer: TrailOffer;
@@ -17,6 +18,8 @@ const OfferSkeleton = () => {
 export const HomeTrailOffer = ({ trailOffer }: Props) => {
   const { offerId } = trailOffer;
   const [startLoading, setStartLoading] = useState(false);
+
+  const { t } = useTranslation();
 
   const { ref, inView } = useInView({
     threshold: 0.4,
@@ -43,7 +46,7 @@ export const HomeTrailOffer = ({ trailOffer }: Props) => {
 
   return (
     <S.Offer ref={ref}>
-      <S.OfferTitle>{trailOffer.title}</S.OfferTitle>
+      <S.OfferTitle>{t(`home.homeTrailOffer.title.offerTitle${offerId}`)}</S.OfferTitle>
       <S.OfferList>{render()}</S.OfferList>
     </S.Offer>
   );

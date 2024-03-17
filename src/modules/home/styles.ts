@@ -202,6 +202,7 @@ export const DropDownMenu = styled.div`
   border-radius: 0 0 8px 8px;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   overflow: hidden;
+  text-overflow: ellipsis;
 
   @keyframes slide-top {
     0% {
@@ -243,5 +244,29 @@ export const DropDownMenuItem = styled.div<{
       &:hover {
         background-color: rgba(0, 0, 0, 1);
       }
+    `}
+`;
+
+export const Language = styled.div<{ $hide: boolean }>`
+  ${({ $hide }) =>
+    !$hide
+      ? css`
+          position: absolute;
+          right: -100%;
+          display: none;
+        `
+      : css`
+          position: static;
+          right: 0;
+          display: block;
+        `}
+`;
+
+export const Options = styled.div<{ $hide: boolean }>`
+  ${({ $hide }) =>
+    $hide &&
+    css`
+      position: absolute;
+      left: -100%;
     `}
 `;

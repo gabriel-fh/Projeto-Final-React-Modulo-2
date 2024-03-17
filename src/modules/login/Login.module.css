@@ -86,7 +86,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 7.9rem;
+  width: 8.65rem;
   display: flex;
   justify-content: center;
   border-radius: .5rem;
@@ -107,6 +107,8 @@
   text-align: center;
   background-color: rgba(134, 151, 206, 0.3);
   border-radius: .5rem;
+  width: 8.65rem;
+
 }
 
 .langOptions > * {
@@ -120,11 +122,15 @@
   transition: .4s ease-in-out;
 }
 
-.langOptions :nth-child(1):hover {
+.activeLang {
+  background-color: rgba(134, 151, 206, 0.5);
+}
+
+.langOptions :nth-child(1):hover, .langOptions :nth-child(1).activeLang {
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
 }
-.langOptions :nth-child(2):hover {
+.langOptions :nth-child(2):hover, .langOptions :nth-child(2).activeLang {
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
 }

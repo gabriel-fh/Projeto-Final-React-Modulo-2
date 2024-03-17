@@ -25,7 +25,7 @@ const Login = () => {
   } = useLogin();
 
   const { t } = useTranslation();
-  const { changeLanguage } = useLang();
+  const { changeLanguage, lang } = useLang();
 
   return (
     <main className={globalStyles.container}>
@@ -50,6 +50,7 @@ const Login = () => {
                     changeLanguage("en-US");
                     setIsOpen(false);
                   }}
+                  className={lang === "en-US" ? styles.activeLang : ""}
                 >
                   {t("login.button.lang.en-US")}
                 </span>
@@ -58,13 +59,14 @@ const Login = () => {
                     changeLanguage("pt-BR");
                     setIsOpen(false);
                   }}
+                  className={lang === "pt-BR" ? styles.activeLang : ""}	
                 >
                   {t("login.button.lang.pt-BR")}
                 </span>
               </div>
             )}
           </div>
-          <Button variant="transparent">{t("login.button.singUp")}</Button>
+          <Button variant="transparent">{t("login.button.signUp")}</Button>
         </div>
       </header>
       <section className={styles.content}>
