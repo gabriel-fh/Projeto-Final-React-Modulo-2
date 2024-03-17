@@ -1,0 +1,21 @@
+{
+  "login": {
+    "button": {
+      "signIn": "Entrar",
+      "singUp": "Criar Conta",
+      "lang": {
+        "pt-BR": "Português",
+        "en-US": "Inglês"
+      }
+    },
+    "title": {
+      "getStarted": "Iniciar Sessão",
+      "signIn": "Fazer Login"
+    },
+    "description": "Digite o endereço de e-mail e a senha da sua conta Max ou HBO Max.",
+    "input": {
+      "email": "E-mail",
+      "password": "Senha"
+    }
+  }
+}

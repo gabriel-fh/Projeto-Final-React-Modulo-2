@@ -1,0 +1,21 @@
+{
+  "login": {
+    "button": {
+      "signIn": "Sign In",
+      "singUp": "Sign Up Now",
+      "lang": {
+        "pt-BR": "Portuguese",
+        "en-US": "English"
+      }
+    },
+    "title": {
+      "getStarted": "Get Started",
+      "signIn": "Sign In"
+    },
+    "description": "Enter your Max or HBO Max account email address and password.",
+    "input": {
+      "email": "Email Address",
+      "password": "Password"
+    }
+  }
+}
