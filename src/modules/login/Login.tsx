@@ -9,6 +9,7 @@ import Alert from "../../components/Alert";
 import useLogin from "./hooks/use-login";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLang } from "../../providers/LangProvider";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,12 +24,8 @@ const Login = () => {
     handleSubmit,
   } = useLogin();
 
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (language: string | undefined) => {
-    setIsOpen(!isOpen);
-    i18n.changeLanguage(language);
-  };
+  const { t } = useTranslation();
+  const { changeLanguage } = useLang();
 
   return (
     <main className={globalStyles.container}>
@@ -48,24 +45,36 @@ const Login = () => {
             </button>
             {isOpen && (
               <div className={styles.langOptions}>
-                <span onClick={() => changeLanguage('en-US')}>{t('login.button.lang.en-US')}</span>
-                <span onClick={() => changeLanguage('pt-BR')}>{t('login.button.lang.pt-BR')}</span>
+                <span
+                  onClick={() => {
+                    changeLanguage("en-US");
+                    setIsOpen(false);
+                  }}
+                >
+                  {t("login.button.lang.en-US")}
+                </span>
+                <span
+                  onClick={() => {
+                    changeLanguage("pt-BR");
+                    setIsOpen(false);
+                  }}
+                >
+                  {t("login.button.lang.pt-BR")}
+                </span>
               </div>
             )}
           </div>
-          <Button variant="transparent">{t('login.button.singUp')}</Button>
+          <Button variant="transparent">{t("login.button.singUp")}</Button>
         </div>
       </header>
       <section className={styles.content}>
-        <h1 className={globalStyles.title}>{t('login.title.getStarted')}</h1>
+        <h1 className={globalStyles.title}>{t("login.title.getStarted")}</h1>
         <div className={styles.login}>
-          <h2 className={styles.title}>{t('login.title.signIn')}</h2>
-          <p className={styles.description}>
-            {t('login.description')}
-          </p>
+          <h2 className={styles.title}>{t("login.title.signIn")}</h2>
+          <p className={styles.description}>{t("login.description")}</p>
           <form onSubmit={handleSubmit}>
             <Input
-              label={t('login.input.email')}
+              label={t("login.input.email")}
               placeholder="email@email.com"
               type="email"
               disabled={isPending}
@@ -74,7 +83,7 @@ const Login = () => {
             />
             <div className={styles.inputWithIcon}>
               <Input
-                label={t('login.input.password')}
+                label={t("login.input.password")}
                 type={showPassword ? "text" : "password"}
                 disabled={isPending}
                 error={errors.password?.message}
@@ -90,7 +99,7 @@ const Login = () => {
             </div>
             <div className={styles.btnContainer}>
               <Button type="submit" variant="filled" isLoading={isPending}>
-                {t('login.button.signIn')}
+                {t("login.button.signIn")}
               </Button>
             </div>
             {isError && <Alert>Credencias inválidas</Alert>}

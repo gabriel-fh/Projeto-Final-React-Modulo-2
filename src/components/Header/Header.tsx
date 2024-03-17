@@ -3,21 +3,24 @@ import { useState, useEffect } from "react";
 import { HomeMenu } from "../../modules/home/HomeMenu";
 import * as S from "./styles";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const MENU_ITEMS = [
-  { path: "/", label: "Home" },
-  { path: "/series", label: "Series" },
-  { path: "/movies", label: "Movies" },
-  { path: "/kids&family", label: "Kids & Family" },
-];
 
 const Header = () => {
   const [activeItem, setActiveItem] = useState("/");
   const location = useLocation(); 
+  const { t } = useTranslation();
   
   useEffect(() => {
     setActiveItem(location.pathname);
   }, [location]);
+
+  const MENU_ITEMS = [
+    { path: "/", label: `${t('home.header.nav.home')}` },
+    { path: "/series", label: `${t('home.header.nav.series')}` },
+    { path: "/movies", label: `${t('home.header.nav.movies')}` },
+    { path: "/kids&family", label: `${t('home.header.nav.kidsFamily')}` },
+  ];
 
   return (
     <S.Header>

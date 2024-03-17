@@ -17,5 +17,15 @@
       "email": "E-mail",
       "password": "Senha"
     }
+  },
+  "home" : {
+    "header": {
+      "nav": {
+        "home": "Início",
+        "series": "Séries",
+        "movies": "Filmes",
+        "kidsFamily": "Crianças e Família"
+      }
+    }
   }
 }
