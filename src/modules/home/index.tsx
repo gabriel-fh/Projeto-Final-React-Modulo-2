@@ -20,7 +20,7 @@ export const Home = () => {
       setIndex((prevIndex) => (prevIndex + 1) % (banners?.length || 1));
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [banners?.length]);
 
   return (
     <>
