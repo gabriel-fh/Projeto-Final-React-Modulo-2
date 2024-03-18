@@ -6,7 +6,7 @@ import { HomeTrailOffer } from "./HomeTrailOffer";
 import clsx from "clsx";
 import { useGetBanners } from "./hooks/get-banners";
 import { useGetTrailOffers } from "./hooks/get-trail-offers";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header  from "../../components/Header/Header";
 
 export const Home = () => {
@@ -14,13 +14,6 @@ export const Home = () => {
   const { data: trailOffers } = useGetTrailOffers();
   const [index, setIndex] = useState(0);
   const banner = banners?.[index] || null;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % (banners?.length || 1));
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
